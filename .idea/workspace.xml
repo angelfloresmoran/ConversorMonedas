@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ac8e900-ef9d-40bd-9dd4-a0fb827c6f94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/angelodev/conversormonedas/dto/ConversionMonedasDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/angelodev/conversormonedas/modelos/Moneda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/angelodev/conversormonedas/peticioneshttp/PairConversionRequests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/angelodev/conversormonedas/principal/Principal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/angelodev/conversormonedas/modelos/FiltraCodigosMonedas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConversorMonedas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ConversorMonedas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/angelodev/conversormonedas/principal/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/angelodev/conversormonedas/principal/Principal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

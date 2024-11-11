@@ -1,6 +1,7 @@
 package com.angelodev.conversormonedas.principal;
 
 import com.angelodev.conversormonedas.dto.ConversionMonedasDTO;
+import com.angelodev.conversormonedas.modelos.FiltraCodigosMonedas;
 import com.angelodev.conversormonedas.peticioneshttp.PairConversionRequests;
 
 import java.io.IOException;
@@ -8,6 +9,7 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) throws IOException, InterruptedException {
+        FiltraCodigosMonedas filtrandoMoneda = new FiltraCodigosMonedas();
         Scanner teclado = new Scanner(System.in);
         int opcionSeleccionadaPorUsuario = 0;
         double montoAConvertir;
@@ -23,7 +25,6 @@ public class Principal {
                 9) Salir
                 -----
                 """;
-
         PairConversionRequests conversiona = new PairConversionRequests();
         ConversionMonedasDTO conversion;
 
@@ -41,43 +42,12 @@ public class Principal {
             } else {
                 System.out.println("Ingrese el monto que desea convertir:");
                 montoAConvertir = teclado.nextDouble();
-                switch (opcionSeleccionadaPorUsuario){
-                    case 1:
-                        conversion = conversiona.realizaConversion("USD", "MXN", montoAConvertir);
-                        System.out.println("El valor " + montoAConvertir + conversion);
-                        break;
-                    case 2:
-                        conversion = conversiona.realizaConversion("MXN", "USD", montoAConvertir);
-                        System.out.println("El valor " + montoAConvertir + conversion);
-                        break;
-                    case 3:
-                        conversion = conversiona.realizaConversion("USD", "ARS", montoAConvertir);
-                        System.out.println("El valor " + montoAConvertir + conversion);
-                        break;
-                    case 4:
-                        conversion = conversiona.realizaConversion("ARS", "USD", montoAConvertir);
-                        System.out.println("El valor " + montoAConvertir + conversion);
-                        break;
-                    case 5:
-                        conversion = conversiona.realizaConversion("USD", "BRL", montoAConvertir);
-                        System.out.println("El valor " + montoAConvertir + conversion);
-                        break;
-                    case 6:
-                        conversion = conversiona.realizaConversion("BRL", "USD", montoAConvertir);
-                        System.out.println("El valor " + montoAConvertir + conversion);
-                        break;
-                    case 7:
-                        conversion = conversiona.realizaConversion("USD", "COP", montoAConvertir);
-                        System.out.println("El valor " + montoAConvertir + conversion);
-                        break;
-                    case 8:
-                        conversion = conversiona.realizaConversion("COP", "USD", montoAConvertir);
-                        System.out.println("El valor " + montoAConvertir + conversion);
-                        break;
-                    default:
-                        System.out.println("Ha ocurrido un error, intente de nuevo");
-                        break;
-                }
+                filtrandoMoneda.setCodigosMoneda(opcionSeleccionadaPorUsuario);
+
+                conversion = conversiona.realizaConversion(filtrandoMoneda.getMonedaBase(), filtrandoMoneda.getMonedaObjetivo(), montoAConvertir);
+                System.out.println(" ########## RESULTADOS DE LA CONVERSIÓN ########## ");
+                System.out.println("El valor: " + montoAConvertir + conversion);
+                System.out.println(" ################################################# ");
             }
         }
     }

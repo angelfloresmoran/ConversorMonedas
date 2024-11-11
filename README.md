@@ -43,5 +43,9 @@ Para una mejor estructura, se crearon varios paquetes.
 <img width="500" alt="conversion" src="https://github.com/user-attachments/assets/31075b55-2908-46f8-a67f-756d0f9866ae">
 <img width="500" alt="conversionARS" src="https://github.com/user-attachments/assets/7a92e5f4-1ad3-4ba2-b88f-020ba5ccd376">
 
+## Insignias 
+### Insignia obtenida tras finalizar el desafío
+![Badge-Conversor](https://github.com/user-attachments/assets/eb3cc1e7-3ed8-4790-bf98-fc240250a398)
+
 
 
